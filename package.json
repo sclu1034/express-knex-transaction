@@ -8,5 +8,14 @@
   "license": "MIT",
   "dependencies": {
     "on-finished": "^2.3.0"
+  },
+  "devDependencies": {
+    "express": "^4.14.0",
+    "knex": "^0.12.6",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  },
+  "scripts": {
+    "test": "mocha test/test.js"
   }
 }
