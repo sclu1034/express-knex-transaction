@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:SirAiedail/express-knex-transaction.git",
   "author": "Lucas Schwiderski <lucas.schwiderski@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "on-finished": "^2.3.0"
+  }
 }
