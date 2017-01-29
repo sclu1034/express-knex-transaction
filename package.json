@@ -13,6 +13,8 @@
     "express": "^4.14.0",
     "knex": "^0.12.6",
     "mocha": "^3.2.0",
+    "mock-knex": "^0.3.7",
+    "node-mocks-http": "^1.5.6",
     "should": "^11.1.2"
   },
   "scripts": {
