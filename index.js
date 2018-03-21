@@ -11,7 +11,7 @@ module.exports = function(knex) {
 
             onFinished(res, function (err, res) {
                 if (err || (res.statusCode && res.statusCode >= 400)) {
-                    trx.rollback();
+                    trx.rollback(new Error('status code: ' + res.statusCode));
                 } else {
                     trx.commit();
                 }
