@@ -11,16 +11,13 @@ module.exports = function(knex) {
 
             onFinished(res, function (err, res) {
                 if (err || (res.statusCode && res.statusCode >= 400)) {
-                  try {
                     trx.rollback(new Error('status code: ' + res.statusCode));
-                  // suppress unhandled error message
-                  } catch (_err) {}
                 } else {
                     trx.commit();
                 }
             });
 
             next();
-        });
+        }).catch(() => {});
     }
 };
