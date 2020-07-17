@@ -1,6 +1,6 @@
 {
   "name": "express-knex-transaction",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Express middleware that adds a req.trx object so you can easily wrap your code in a signle transaction",
   "main": "index.js",
   "repository": "git@github.com:SirAiedail/express-knex-transaction.git",
