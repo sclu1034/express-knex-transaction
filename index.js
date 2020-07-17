@@ -18,6 +18,6 @@ module.exports = function(knex) {
             });
 
             next();
-        });
+        }).catch(() => {});
     }
 };

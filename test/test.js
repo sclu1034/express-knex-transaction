@@ -49,7 +49,7 @@ describe('express-knex-transaction', function () {
     });
 
     it('should return a function', function () {
-      expressKnexTransaction(knex({})).should.be.a.Function;
+      expressKnexTransaction(knex({ client: 'pg' })).should.be.a.Function;
     });
   });
 
@@ -134,7 +134,7 @@ describe('express-knex-transaction', function () {
 
           req.trx.rollback = function () {
             isRolledBack = true;
-            oldRollback();
+            return oldRollback();
           };
 
           onFinished(res, function (err) {
